@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: url("/images/hero_img.jpg");
+    background-size: cover;
+}
+.translation{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    font-size: 1rem;
+}
+.trans-1,.trans-2{
+    background-color: #212936cc;
+    width: 450px;
+    height: 300px;
+    border-radius: 15px;
+    padding: 10px;
+}
+.lang-choose{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 5px;
+    border-bottom: 1px solid #4D5562;
+}
+.lang-choose button{
+    color: #CDD5E0;
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+    transition: 0.3s linear;
+    padding: 8px;
+}
+.lang-choose button:hover{
+    border-radius: 10px;
+    background-color: #4D5562;
+}
+.lang-choose button:active{
+    border-radius: 10px;
+    background-color: #4D5562;
+}
+textarea{
+    border: none;
+    outline: none;
+    resize: none;
+    background: none;
+    width: 100%;
+    height: 65%;
+    color: #CDD5E0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+textarea::placeholder{
+    color: #CDD5E0;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.record-copy{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.record-copy button{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: transparent;
+    border:2px solid #4D5562 ;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.record-copy button img{
+    color: #4D5562;
+}
+.translate-count{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.translate-count span{
+    font-size: 14px;
+    color: #CDD5E0;
+}
+.translate-count button{
+    display: flex;
+    align-items: center;
+    background-color: #3662E3;
+    border: 1px solid #7CA9F3;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+.translate-count button:hover{
+    background-color: #7CA9F3;
+    border-color: #3662E3;
+}
+.trans-2 .lang-choose {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.exchance{
+    border: 2px solid #4D5562;
+    border-radius: 8px;
+}
+.exchance button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+.exchance button:hover{
+    background-color: transparent;
+}
+
+.expand-down{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/**/
+/* Add this in your CSS file to style the active language button */
+.lang-btn.active-lang {
+    background-color: #4D5562;  /* Or any color to highlight the active button */
+    color: white;  /* Change the text color when active */
+    border-radius: 10px; /* Add a bit of border-radius */
+}
+.lang-btn-to.active-lang {
+    background-color: #4D5562;  /* Or any color to highlight the active button */
+    color: white;  /* Change the text color when active */
+    border-radius: 10px; /* Add a bit of border-radius */
+}
+
+@media only screen and (max-width:375px) {
+    .translation{
+        flex-direction: column;
+    }
+    .trans-1,.trans-2{
+        width: 90%;
+        height: 300px;
+    }
+}
+@media only screen and (max-width:925px) {
+    .translation{
+        flex-direction: column;
+    }
+    .trans-1,.trans-2{
+        width: 90%;
+        height: 280px;
+    }
+    textarea{
+        height: 54%;
+    }
+}

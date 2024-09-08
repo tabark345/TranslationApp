@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Translation App</title>    
+</head>
+<body>
+    <div class="container">
+        <img src="/images/logo.svg" alt="logo">
+        <div class="translation">
+            <div class="trans-1">
+                <div class="lang-choose">
+                    <button class="lang-btn" data-lang="ar">Detect Language</button>
+                    <button class="lang-btn" data-lang="en">English</button>
+                    <button class="lang-btn" data-lang="fr">French</button>
+                    <button class="lang-btn" data-lang="es" id="expand-down">Spanish <img src="/images/Expand_down.svg"></button>
+                </div>
+                <textarea  id="from-text" class="from-text" spellcheck="false" class="from-text" placeholder="Enter text" ></textarea>
+                <div class="links">
+                    <div class="record-copy">
+                        <button id="from-record"><img src="/images/sound_max_fill.svg" ></button>
+                        <button id="from-copy"><img src="/images/Copy.svg" ></button>
+                    </div>
+                    <div class="translate-count">
+                        <span><span class="char-count" id="char-count"></span>/500</span>
+                        <button class="translate-btn" id="translate-btn"><img src="/images/Sort_alfa.svg"> Translate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="trans-2">
+                <div class="lang-choose">
+                    <div class="">
+                        <button class="lang-btn-to" data-lang="en">English</button>
+                        <button class="lang-btn-to" data-lang="fr">French</button>
+                        <button class="lang-btn-to" data-lang="es" id="expand-down">Spanish <img src="/images/Expand_down.svg"></button>
+                    </div>
+                    <div class="exchance">
+                        <button id="swap-btn"><img src="/images/Horizontal_top_left_main.svg"></button>
+                    </div>
+                </div>
+                <textarea  id="to-text" spellcheck="false" readonly disabled class="to-text" placeholder="Translation"></textarea>
+                <div class="record-copy">
+                    <button id="to-record"><img src="/images/sound_max_fill.svg" ></button>
+                    <button id="to-copy"><img src="/images/Copy.svg" ></button>
+                </div>
+            </div>
+        </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
