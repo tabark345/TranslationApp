@@ -5,13 +5,27 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set default languages
     let fromLang = 'en'; // Default: English as the source language
     let toLang = 'fr'; // Default: French as the target language
-
+    
+    const charCounter = document.getElementById('char-count')
     const translateBtn = document.getElementById('translate-btn');
     const swapBtn = document.getElementById('swap-btn');
     const fromCopyBtn = document.getElementById('from-copy');
     const toCopyBtn = document.getElementById('to-copy');
     const fromListenBtn = document.getElementById('from-record');
     const toListenBtn = document.getElementById('to-record');
+
+        // Function to update character count
+    const updateCharCount = () => {
+        const charCount = fromText.value.length;
+        charCounter.textContent = charCount; // Update the count on the page
+
+        if (charCount >= maxChars) {
+            fromText.value = fromText.value.substring(0, maxChars); // Restrict to max characters
+        }
+    };
+
+    // Add event listener to update the character count on input
+    fromText.addEventListener('input', updateCharCount);
 
     // Translate text using MyMemory API
     const translateText = () => {
