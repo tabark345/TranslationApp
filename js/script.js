@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toListenBtn.addEventListener('click', () => textToSpeech(toText.value));
 
     // Set default translation (translates 'Hello, how are you' to French)
-    fromText.value = "Hello, how are you";
+    fromText.value = "Hello, how are you?";
     translateText();
 
     // Initialize with default active language buttons
